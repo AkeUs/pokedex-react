@@ -1,18 +1,41 @@
-import React, { useEffect } from 'react';
-import PokeApiClient from '../services/poke-api/PokeApiClient';
+import React, {useEffect, useState} from 'react';
+import { getPokemonById } from '../services/poke-api/PokeApiClient';
+import PokedexSearch from './PokedexSearch';
+import PokedexCard from './PokedexCard';
+import { PokemonResponse } from '../services/poke-api/responses/PokemonResponse';
 
 const Pokedex = () => {
+    const [error, setError] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [pokemon, setPokemon] = useState<PokemonResponse|null>(null);
+    const RandomId = Math.floor(Math.random() * 150);
+    const [pokemonId, setPokemonId] = useState<number|string>(RandomId);
 
     useEffect(() => {
-        let client = new PokeApiClient();
-        client.GetPokemonById(9).then(data => {
-            console.log(data.stats);
+        getPokemonById(pokemonId).then(data => {
+            setPokemon(data);
+            setLoading(false);
+            setError(false);
+        }).catch(err => {
+            console.error(err);
+            setLoading(false);
+            setError(true);
         });
-    }, [])
+    }, [pokemonId]);
 
     return (
         <div>
             <h1>Pokedex</h1>
+            <PokedexSearch
+                setPokemonId={setPokemonId}
+                setLoading={setLoading}
+                setError={setError}
+            />
+            <PokedexCard
+                pokemon={pokemon}
+                loading={loading}
+                error={error}
+            />
         </div>
     )
 }

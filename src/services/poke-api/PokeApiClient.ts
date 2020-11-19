@@ -1,13 +1,10 @@
-import {PokemonResponse} from "./responses/PokemonResponse";
+import { PokemonResponse } from './responses/PokemonResponse';
 
-export default class PokeApiClient {
-    private readonly pokeApiUrl: string = "https://pokeapi.co/api/v2";
+const pokeApiUrl: string = "https://pokeapi.co/api/v2";
 
-    public async GetPokemonById(pokemonId: number) : Promise<PokemonResponse> {
-        let url: string = `${this.pokeApiUrl}/pokemon/${pokemonId}`;
-        let response = await fetch(url);
-        let result = await response.json();
-        console.log(result);
-        return result;
-    }
+export async function getPokemonById(pokemonId: number|string) : Promise<PokemonResponse> {
+    let url: string = `${pokeApiUrl}/pokemon/${pokemonId}`;
+    let response = await fetch(url);
+    return await response.json();
 }
+

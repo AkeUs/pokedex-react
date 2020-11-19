@@ -5,11 +5,11 @@ export interface PokemonResponse {
         front_default: string,
         back_default: string
     },
-    stats: [Stat],
-    types: [type]
+    stats: [IPokemonStat],
+    types: [IPokemontype]
 }
 
-interface Stat {
+export interface IPokemonStat {
     base_stat: number,
     effort: number,
     stat: {
@@ -17,7 +17,7 @@ interface Stat {
     }
 }
 
-interface type {
+export interface IPokemontype {
     slot: number,
     type: {
         name: string

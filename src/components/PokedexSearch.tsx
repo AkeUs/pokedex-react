@@ -29,7 +29,7 @@ const PokedexSearch = ({ setPokemonId, setLoading, setError }: PokedexSearchProp
     }
 
     return (
-        <form onSubmit={searchPokemon}>
+        <form onSubmit={searchPokemon} className="search-form">
             <input
                 type="text"
                 name="pokemon"
@@ -40,7 +40,7 @@ const PokedexSearch = ({ setPokemonId, setLoading, setError }: PokedexSearchProp
             />
             <input
                 type="submit"
-                value=""
+                value="search"
             />
         </form>
     )

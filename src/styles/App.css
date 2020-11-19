@@ -1,3 +1,62 @@
-.App {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedex-title {
+  font-size: 4.5em;
+  color: #F7C406;
+  -webkit-text-stroke: 3px #3C5AAF;
+}
+
+.search-form {
+  margin: 0 0 30px 0;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.search-form > input[type="text"] {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+.search-form > input[type="submit"] {
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+}
+
+.pokedex-card {
+  background-color: #FFFFFF;
+  min-width: 100%;
+  padding:10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.pokedex-card:hover {
+  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.5);
+}
+
+.pokedex-card-header {
   text-align: center;
 }
+
+.pokedex-card-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.pokemon-stats {
+  list-style: none;
+}
+
+.text-help {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+
+
+

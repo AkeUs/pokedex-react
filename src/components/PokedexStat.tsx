@@ -9,7 +9,7 @@ const PokedexStat = ({ item }: PokedexStatProps) => {
 
     return (
         <li>
-            <span>{item.stat.name}: </span>
+            <span><b>{item.stat.name.toUpperCase()}: </b></span>
             <span>{item.base_stat}</span>
         </li>
     )

@@ -24,8 +24,8 @@ const Pokedex = () => {
     }, [pokemonId]);
 
     return (
-        <div>
-            <h1>Pokedex</h1>
+        <div className="container">
+            <h1 className="pokedex-title">Poked&eacute;x</h1>
             <PokedexSearch
                 setPokemonId={setPokemonId}
                 setLoading={setLoading}

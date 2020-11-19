@@ -6,7 +6,7 @@ export interface PokemonResponse {
         back_default: string
     },
     stats: [IPokemonStat],
-    types: [IPokemontype]
+    types: [IPokemonType]
 }
 
 export interface IPokemonStat {
@@ -17,7 +17,7 @@ export interface IPokemonStat {
     }
 }
 
-export interface IPokemontype {
+export interface IPokemonType {
     slot: number,
     type: {
         name: string

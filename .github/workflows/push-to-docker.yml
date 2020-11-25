@@ -1,12 +1,12 @@
-name: deploy
+name: push-to-docker
 
 on:
   push:
     branches: main
 
 jobs:
-  main:
-    name: Build docker image
+  docker-hub:
+    name: Build and push to docker
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,11 +24,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push image
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: |
             akeus/pokedex-react:latest
             akeus/pokedex-react:${{ github.run_number }}
-

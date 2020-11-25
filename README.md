@@ -23,5 +23,5 @@ npm start
 ## Docker
 
 ``` shell script
-docker run -it -p 80:80 akeus/pokedex-react
+docker run -d -p 3000:80 akeus/pokedex-react
 ```

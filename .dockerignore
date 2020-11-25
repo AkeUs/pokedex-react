@@ -1,0 +1,11 @@
+/build
+/node_modules
+/.git
+/.vs
+/.vscode
+/.idea
+/.github
+
+.gitignore
+.dockerignore
+README.md

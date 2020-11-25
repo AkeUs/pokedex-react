@@ -29,6 +29,6 @@ jobs:
         with:
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.repository }}:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.repository }}:${{ github.sha }}
+            akeus/pokedex-react:latest
+            akeus/pokedex-react:${{ GITHUB_RUN_NUMBER }}
 

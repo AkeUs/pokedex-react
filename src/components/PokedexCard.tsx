@@ -28,7 +28,7 @@ const PokedexCard = ({ pokemon, loading, error }: PokedexCardProps) => {
                         <h2>{pokemon?.name.toUpperCase()}</h2>
                     </div>
                     <div className="pokedex-card-info">
-                        <img alt={pokemon?.name}
+                        <img alt="pokemon"
                              src={pokemon?.sprites.front_default}
                         />
                         <ul className="pokemon-stats">

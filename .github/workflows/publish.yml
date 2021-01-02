@@ -1,26 +1,12 @@
-name: push-to-docker
+name: publish
 
 on:
   push:
     branches: main
 
 jobs:
-  security:
-    name: Scan with Snyk
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@master
-
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
-
-  docker-hub:
-    name: Build and push to docker
+  docker:
+    name: Publish Docker image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,4 +30,4 @@ jobs:
           push: true
           tags: |
             akeus/pokedex-react:latest
-            akeus/pokedex-react:${{ github.run_number }}
+            akeus/pokedex-react:${{ github.run_id }}

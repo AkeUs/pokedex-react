@@ -1,9 +1,5 @@
 # Pokedex React
 
-[![Vulnerabilities](https://snyk.io/test/github/AkeUs/pokedex-react/main/badge.svg)](https://snyk.io/test/github/AkeUs/pokedex-react)
-  
-![Continuous Integration](https://github.com/AkeUs/pokedex-react/workflows/push-to-docker/badge.svg?branch=main)
-
 Aplicación construida con ReactJS, haciendo uso de hooks y typescript.
 
 [Demo](https://pokedex-react.akeus.vercel.app)

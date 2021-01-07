@@ -1,8 +1,10 @@
 # Pokedex React
 
+![build](https://github.com/AkeUS/pokedex-react/workflows/build/badge.svg?branch=main)
+
 Aplicación construida con ReactJS, haciendo uso de hooks y typescript.
 
-[Demo](https://pokedex-react.akeus.vercel.app)
+[Pokedex React](https://pokedex-react.akeus.vercel.app)
 
 ## Ejecutar con NodeJs
 
@@ -10,19 +12,19 @@ Clonar el proyecto y ejecutar los siguientes comandos
 
 Descargar dependencias
 
-``` shell script
+```shell=
 npm install
 ```
 
 Ejecutar aplicación
 
-``` shell script
+```shell=
 npm start
 ```
 
 ## Ejecutar con Docker
 
-``` shell script
+```shell=
 docker run -d -p 3000:80 akeus/pokedex-react
 ```
 

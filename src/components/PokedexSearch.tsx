@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 
-type PokedexSearchProps = {
+interface PokedexSearchProps {
     setPokemonId: any,
     setLoading: any,
     setError: any

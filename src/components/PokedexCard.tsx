@@ -1,10 +1,10 @@
 import React from 'react';
-import { PokemonResponse } from '../services/poke-api/responses/PokemonResponse';
 import PokedexStat from "./PokedexStat";
+import { PokeApiSearchPokemonResultType } from '../types/PokeApi';
 
-type PokedexCardProps = {
-    pokemon: PokemonResponse | null,
-    loading: boolean
+interface PokedexCardProps {
+    pokemon: PokeApiSearchPokemonResultType | null,
+    loading: boolean,
     error: boolean
 }
 

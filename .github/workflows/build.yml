@@ -6,6 +6,7 @@ on:
 
 jobs:
   build:
+    name: build application
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,6 +21,7 @@ jobs:
 
   security:
     needs: build
+    name: scan vulnerabilities
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,8 +34,9 @@ jobs:
         with:
           command: monitor
 
-  docker:
+  publish:
     needs: security
+    name: publish dockerhub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

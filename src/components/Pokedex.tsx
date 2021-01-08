@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { getPokemonById } from '../services/poke-api/PokeApiClient';
+import { getPokemonById } from '../services/PokeApiClient';
 import PokedexSearch from './PokedexSearch';
 import PokedexCard from './PokedexCard';
-import { PokemonResponse } from '../services/poke-api/responses/PokemonResponse';
+import { PokeApiSearchPokemonResultType } from '../types/PokeApi';
 
 const Pokedex = () => {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(true);
-    const [pokemon, setPokemon] = useState<PokemonResponse|null>(null);
+    const [pokemon, setPokemon] = useState<PokeApiSearchPokemonResultType|null>(null);
     const RandomId = Math.floor(Math.random() * 152);
     const [pokemonId, setPokemonId] = useState<number|string>(RandomId);
 

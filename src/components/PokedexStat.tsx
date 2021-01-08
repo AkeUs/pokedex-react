@@ -1,8 +1,8 @@
 import React from 'react';
-import { IPokemonStat } from '../services/poke-api/responses/PokemonResponse';
+import { PokemonStat } from '../types/PokeApi';
 
-type PokedexStatProps = {
-    item: IPokemonStat
+interface PokedexStatProps {
+    item: PokemonStat
 }
 
 const PokedexStat = ({ item }: PokedexStatProps) => {
